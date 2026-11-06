@@ -1,0 +1,21 @@
+# Secretos, llaves y certificados de Wazuh
+*.key
+*.pem
+*.cert
+client.keys
+ossec.conf.bak
+
+# Archivos de entorno y credenciales
+.env
+*credentials*
+*secret*
+
+# Logs crudos pesados y capturas de tráfico (PCAP)
+*.log
+*.pcap
+*.pcapng
+*.evtx
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
