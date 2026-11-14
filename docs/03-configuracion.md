@@ -78,7 +78,7 @@ sudo tar czf /root/backups/wazuh-etc-$(date +%F).tar.gz /var/ossec/etc
 
 Además de los snapshots de las VMs, esto permite restaurar solo la configuración de Wazuh.
 
-> 📸 Captura sugerida: `docs/img/03-ufw-status.png`
+> Captura: `docs/img/03-ufw-status.png`
 
 ## 3. Grupos de agentes y configuración centralizada
 
@@ -130,7 +130,7 @@ sudo /var/ossec/bin/verify-agent-conf
 
 En el dashboard: **Agents → Groups** debe mostrar cada grupo con su agente. Los agentes reciben la configuración en pocos minutos.
 
-> 📸 Captura sugerida: `docs/img/03-grupos-agentes.png`
+> Captura: `docs/img/03-grupos-agentes.png`
 
 ## 4. Fuentes de logs en Linux
 

@@ -1,0 +1,23 @@
+<group name="local,lab,">
+
+  <!-- Escaneo SYN interno detectado por la regla local de Suricata (ver sección 8) -->
+  <rule id="100100" level="10">
+    <if_sid>86601</if_sid>
+    <field name="alert.signature">^LAB - Posible escaneo SYN interno</field>
+    <description>LAB: escaneo SYN interno detectado por Suricata</description>
+    <mitre>
+      <id>T1046</id>
+    </mitre>
+  </rule>
+
+  <!-- PowerShell con comando codificado (Sysmon, evento 1) -->
+  <rule id="100101" level="12">
+    <if_group>sysmon_event1</if_group>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)powershell.*\s-e(nc|ncodedcommand)?\s</field>
+    <description>LAB: PowerShell ejecutado con comando codificado</description>
+    <mitre>
+      <id>T1059.001</id>
+    </mitre>
+  </rule>
+
+</group>
